@@ -1,154 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aldo Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JURAGAN PREDATOR</title>
   <style>
-    :root {
-      --primary: #007BFF;
-      --secondary: #00D4FF;
-      --dark: #0f1724;
-      --light: #f8f9fa;
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #73add9;
+      margin: 0;
+      padding: 0;
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-    body { background: var(--light); color: #333; }
-    
-    /* Header */
+
     header {
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 40px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      position: sticky; top: 0; z-index: 100;
+      background: linear-gradient(90deg, #00a8ff, #0097e6);
+      color: white;
+      text-align: center;
+      padding: 1rem;
     }
-    header h1 { color: var(--primary); font-size: 24px; letter-spacing: 1px; }
-    nav ul { list-style: none; display: flex; gap: 20px; }
-    nav a { text-decoration: none; color: #444; font-weight: 500; transition: color .3s; }
-    nav a:hover { color: var(--primary); }
-    .cart { font-size: 20px; cursor: pointer; position: relative; }
-    .cart span { position: absolute; top: -8px; right: -10px; background: var(--primary); color: white; font-size: 12px; padding: 2px 6px; border-radius: 50%; }
 
-    /* Hero */
-    .hero {
-      text-align: center; padding: 80px 20px;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: white; position: relative; overflow: hidden;
+    header h1 {
+      margin: 0;
     }
-    .hero h2 { font-size: 48px; animation: fadeInDown 1.5s ease; }
-    .hero p { font-size: 18px; margin: 20px auto; max-width: 600px; animation: fadeInUp 1.5s ease; }
-    .hero button {
-      padding: 12px 24px; border: none; background: white; color: var(--primary);
-      font-weight: bold; border-radius: 8px; cursor: pointer; transition: transform .3s;
-    }
-    .hero button:hover { transform: scale(1.05); }
-    @keyframes fadeInDown { from {opacity:0; transform:translateY(-40px)} to {opacity:1; transform:translateY(0)} }
-    @keyframes fadeInUp { from {opacity:0; transform:translateY(40px)} to {opacity:1; transform:translateY(0)} }
 
-    /* Products */
-    .products {
-      padding: 60px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
     }
+
     .product {
-      background: white; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      overflow: hidden; position: relative; transition: transform .3s, box-shadow .3s;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      transition: 0.3s;
     }
-    .product:hover { transform: translateY(-8px); box-shadow: 0 10px 24px rgba(0,0,0,0.15); }
-    .product img { width: 100%; height: 260px; object-fit: cover; }
-    .info { padding: 16px; }
-    .info h3 { font-size: 18px; margin-bottom: 6px; }
-    .info p { color: #777; font-size: 14px; margin-bottom: 10px; }
-    .price { font-weight: bold; color: var(--primary); margin-bottom: 12px; }
-    .info button {
-      padding: 10px 14px; border: none; background: var(--primary); color: white;
-      border-radius: 8px; cursor: pointer; transition: background .3s;
-    }
-    .info button:hover { background: #0056b3; }
 
-    /* Footer */
-    footer {
-      background: var(--dark); color: white; text-align: center;
-      padding: 24px; margin-top: 40px;
+    .product:hover {
+      transform: scale(1.03);
     }
-    footer p { font-size: 14px; color: #ccc; }
+
+    .product img {
+      width: 100%;
+      border-radius: 12px;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .price {
+      color: #0077cc;
+      font-weight: bold;
+    }
+
+    .stock {
+      color: #555;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    button {
+      background: #00a8ff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #0097e6;
+    }
+
+    footer {
+      background: #0077cc;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
-  <!-- Header -->
+
   <header>
-    <h1>ALDO SHOP</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="cart">🛒<span id="cartCount">0</span></div>
+    <h1>Toko JURAGAN PREDATOR</h1>
+    <p>Jual Red Tail Catfish Sehat & Berkualitas 🐟</p>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Style ALDO</h2>
-    <p>Samakan outfit mu seperti King Aldo</p>
-    <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">Shop Now</button>
+  <section class="container" id="product-list">
+    <!-- Produk akan dimuat lewat JavaScript -->
   </section>
 
-  <!-- Products -->
-  <section id="shop" class="products">
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/raihanaldomuhammad-source/Hello-World/8a2372b908f98c1ea740d2092d55d3a850c69c5a/IMG_2618.jpeg" alt="T-shirt">
-      <div class="info">
-        <h3>Casual T-shirt</h3>
-        <p>Soft cotton, available in all sizes</p>
-        <div class="price">Rp 160.000</div>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/raihanaldomuhammad-source/Hello-World/63f3014c17907b1e5ee9078fe0b6b3df08d54757/IMG_5217.jpeg" alt="Hoodie">
-      <div class="info">
-        <h3>WNBY Hoodie</h3>
-        <p>Warm and stylish, for all seasons</p>
-        <div class="price">Rp 340.000</div>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/raihanaldomuhammad-source/Hello-World/63f3014c17907b1e5ee9078fe0b6b3df08d54757/IMG_0237.jpeg" alt="Shirt">
-      <div class="info">
-        <h3>WNBY+JEANS</h3>
-        <p>Perfect for office and meetings</p>
-        <div class="price">Rp 430.000</div>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-    </div>
-    <div class="product">
-      <img src="https://raw.githubusercontent.com/raihanaldomuhammad-source/Hello-World/refs/heads/main/IMG_0478.jpeg" alt="Dress">
-      <div class="info">
-        <h3>LIMITED WNBY</h3>
-        <p>Lightweight and breezy for summer</p>
-        <div class="price">Rp 999.999.999</div>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contact">
-    <h3>Aldo Store</h3>
-    <p>© 2025 Aldo. All Rights Reserved.</p>
-<p>WHATSAP : 62+83840953499</p>
+  <footer>
+    <p>© 2025 JURAGAN PREDATOR | pembuat : Aldo Muhammad Reihan</p>
   </footer>
 
   <script>
-    let cartCount = 0;
-    function addToCart() {
-      cartCount++;
-      document.getElementById("cartCount").innerText = cartCount;
-      // animasi cart
-      const cart = document.querySelector('.cart');
-      cart.style.transform = "scale(1.2)";
-      setTimeout(() => cart.style.transform = "scale(1)", 300);
+    // Daftar produk ikan RTC
+    const products = [
+      {
+        nama: "RTC Kecil (10cm)",
+        harga: 35000,
+        gambar: "https://www.aquariumsource.com/wp-content/uploads/2019/10/redtail-catfish.jpg"
+      },
+      {
+        nama: "RTC Sedang (20cm)",
+        harga: 100000,
+        gambar: "https://www.aquariadise.com/wp-content/uploads/2020/05/redtail-1024x683.jpg"
+      },
+      {
+        nama: "RTC Jumbo (30cm)",
+        harga: 150000,
+        gambar: "https://i.ytimg.com/vi/ygJHmRCaQHY/maxresdefault.jpg"
+      },
+      {
+        nama: "Hiu Air Tawar (30cm)",
+        harga: 60000,
+        gambar:"https://down-id.img.susercontent.com/file/id-11134207-7rasj-m409m5fuoxh4bb"
+      },
+      {
+        nama: "Pibass (10-15cm)",
+        harga: 30000,
+        gambar:"https://simstropicalfish.co.uk/wp-content/uploads/2023/07/Xingu_08075214-1024x712.jpeg"
+      },
+      {
+        nama: "Leopard Jumbo(30cm)",
+        harga: 130000,
+        gambar:"https://images.tokopedia.net/img/cache/700/VqbcmM/2020/10/15/a9485548-7536-48b2-8219-60ff8fdda6ad.jpg"
+      }
+    ];
+
+    const waNumber = "6283840953499"; //
+
+    const listContainer = document.getElementById("product-list");
+    products.forEach(p => {
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <img src="${p.gambar}" alt="${p.nama}">
+        <h3>${p.nama}</h3>
+        <p class="price">Rp ${p.harga.toLocaleString('id-ID')}</p>
+        <button onclick="checkout('${p.nama}', ${p.harga})">Beli Sekarang</button>
+      `;
+      listContainer.appendChild(div);
+    });
+
+    function checkout(nama, harga) {
+      const pesan = `Halo! Saya ingin membeli *${nama}* seharga Rp${harga.toLocaleString('id-ID')}.\nApakah masih tersedia?`;
+      window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(pesan)}`, "_blank");
     }
   </script>
 </body>
